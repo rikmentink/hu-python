@@ -26,15 +26,6 @@ of de prijs met korting afhankelijk van de situatie.
 
 
 def ritprijs(leeftijd, weekendrit, afstandKM):
-    """
-    If the person is a child or a senior citizen, then the price is reduced by 30% on weekdays and 35% on weekends,
-    otherwise the price is reduced by 40% on weekends
-
-    :param leeftijd: age of the person
-    :param weekendrit: Boolean
-    :param afstandKM: The distance in kilometers
-    :return: The price of the ride.
-    """
     if leeftijd < 12 or leeftijd >= 65:
         if weekendrit:
             return standaardprijs(afstandKM) * (1 - 0.35)
