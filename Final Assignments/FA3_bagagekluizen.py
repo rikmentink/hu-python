@@ -1,10 +1,3 @@
-import builtins
-import collections
-import json
-import random
-import sys
-import traceback
-
 """
 Programming
 Final assignment 3: Bagagekluizen
@@ -63,15 +56,13 @@ def nieuwe_kluis():
             return -1
         break
 
-
     # Koppel random kluisnummer
-    with open('kluizen.txt') as file:
+    with open('kluizen.txt', 'r') as file:
         bezette_kluizen = []
         for kluis in file.readlines():
             bezette_kluizen.append(int(kluis.split(';')[0]))
-
         for nummer in range(1, 13):
-            if str(nummer) not in bezette_kluizen:
+            if nummer not in bezette_kluizen:
                 kluisnummer = nummer
 
     # Schrijf naar bestand
@@ -79,6 +70,7 @@ def nieuwe_kluis():
         file.write(f'{kluisnummer};{code}\n')
 
     return kluisnummer
+
 
 def kluis_openen():
     """
@@ -117,13 +109,11 @@ def kluis_teruggeven():
     Returns:
         bool: True als er een kluiscombinatie verwijderd werd, anders False
     """
-    while True:
-        kluisnummer = input('Voer uw kluisnummer in:\n')
+    kluisnummer = input('Voer uw kluisnummer in:\n')
 
-        if int(kluisnummer) not in range(1, 13):
-            print('Voer een geldig kluisnummer.\n')
-            continue
-        break
+    if int(kluisnummer) not in range(1, 13):
+        print('Voer een geldig kluisnummer.\n')
+
     code = input('Voer uw code in:\n')
 
     nieuwe_lijst = []
@@ -142,3 +132,40 @@ def kluis_teruggeven():
         file.writelines(nieuwe_lijst)
 
     return True
+
+
+def main():
+    print('Welkom!')
+    while True:
+        print("1: Ik wil weten hoeveel kluizen nog vrij zijn")
+        print("2: Ik wil een nieuwe kluis")
+        print("3: Ik wil even iets uit mijn kluis halen")
+        print("4: Ik geef mijn kluis terug")
+
+        res = int(input())
+        if res <= 0 or res > 4:
+            print('Dit is geen geldige opdracht. Probeer het opnieuw.')
+            continue
+
+        match res:
+            case 1:
+                print(f'Er zijn nog {aantal_kluizen_vrij()} kluizen vrij.')
+            case 2:
+                print(f'Gelukt! Uw kluis heeft nummer {nieuwe_kluis()} en is nu open.')
+            case 3:
+                if kluis_openen():
+                    print('Uw kluis is nu open.')
+                else:
+                    print('Er is een fout opgetreden, probeer het opnieuw.')
+            case 4:
+                if kluis_teruggeven():
+                    print('Bedankt en tot ziens!')
+                else:
+                    print('Er is een fout opgetreden, probeer het opnieuw.')
+            case 5:
+                print('Tot ziens!')
+                break
+
+
+if __name__ == '__main__':
+    main()
