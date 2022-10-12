@@ -1,4 +1,4 @@
-### 4.1 ###
+# ----- 4.1 ----- #
 score = int(input('Geef je score: '))
 
 if score > 15:
@@ -8,7 +8,8 @@ else:
     print('Helaas!')
     print('Met een score van', score, 'ben je niet geslaagd.')
 
-### 4.2 ###
+
+# ----- 4.2 ----- #
 age = int(input('Geef je leeftijd: '))
 passport = input('Nederlands paspoort: ')
 
@@ -17,9 +18,8 @@ if age >= 18 and passport == 'Ja' or 'ja':
 else:
     print('Je mag helaas niet stemmen.')
 
-# TODO: 4.3 t/m 4.5
 
-### 4.6 ###
+# ----- 4.6 ----- #
 s = "Guido van Rossum heeft programmeertaal Python bedacht."
 klinkers = ['a', 'o', 'u', 'i', 'e']
 

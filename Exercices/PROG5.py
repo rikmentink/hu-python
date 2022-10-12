@@ -1,28 +1,29 @@
-### 5.1 ###
-# def som(getal1, getal2, getal3):
-#     return sum([getal1, getal2, getal3])
+# ----- 5.1 ----- #
+def som_1(getal1, getal2, getal3):
+    return sum([getal1, getal2, getal3])
 
-# print(som(1,2,3))
+# print(som_1(1,2,3))
 
-### 5.2 ###
-# def som(getallenLijst):
-#     return sum(getallenLijst)
 
-# print(som([1, 3, 5]))
+# ----- 5.2 ----- #
+def som_2(getallenLijst):
+    return sum(getallenLijst)
 
-### 5.3 ###
-# def lang_genoeg(lengte):
-#     if lengte >= 120:
-#         return "Je bent lang genoeg voor de attractie!"
-#     else:
-#         return "Sorry, je bent te klein."
-#
+# print(som_2([1, 3, 5]))
+
+
+# ----- 5.3 ----- #
+def lang_genoeg(lengte):
+    if lengte >= 120:
+        return "Je bent lang genoeg voor de attractie!"
+    else:
+        return "Sorry, je bent te klein."
 # lengte = int(input("Wat is jouw lengte in centimeters?\n"))
 # print(lang_genoeg(lengte))
 
-### 5.4 ###
-# def new_password(oldpassword, newpassword):
-#     return newpassword != oldpassword and len(newpassword) >= 6
+# ----- 5.4 ----- #
+def new_password(oldpassword, newpassword):
+    return newpassword != oldpassword and len(newpassword) >= 6
 
 # oldpassword = input("Voer uw oude wachtwoord in: ")
 # newpassword = input("Voer uw nieuwe wachtwoord in: ")
@@ -32,9 +33,8 @@
 # else:
 #     print("Voer een nieuw wachtwoord in.")
 
-# TODO: 5.5
 
-### 5.6 ###
+# ----- 5.6 ----- #
 def wijzig(letterlijst):
     letterlijst.clear()
     letterlijst.append('d')
