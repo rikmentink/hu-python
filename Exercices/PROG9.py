@@ -1,7 +1,7 @@
 import random
 
 
-### 9.1 ###
+# ----- 9.1 ----- #
 bruin = {'Boxtel', 'Best', 'Beukenlaan', 'Eindhoven', 'Helmond \'t hout', 'Helmond', 'Helmond Brouwhuis', 'Deurne'}
 groen = {'Boxtel', 'Best', 'Beukenlaan', 'Eindhoven', 'Geldrop', 'Heeze', 'Weert'}
 
@@ -13,7 +13,7 @@ for lijn in bruin, groen:
 #print(set(overeenkomst))
 
 
-### 9.2 ###
+# ----- 9.2 ----- #
 def monopolyworp():
     """
     Gooit 2 dobbelstenen en print het resultaat in een lijst met tupels. Als
@@ -46,6 +46,51 @@ def monopolyworp():
 #print(monopolyworp())
 
 
-### 9.3 ###
+# ----- 9.3 ----- #
 def code(invoerstring):
-    
+    ascii_values = []
+    code = ''
+
+    for char in invoerstring:
+        ascii_values.append(ord(char)+3)
+
+    for value in ascii_values:
+        if value == 32:
+            code += '#'
+        else:
+            code += (chr(value))
+
+    return code
+
+
+def run3():
+    naam = input('Wat is uw naam?\n')
+    beginstation = input('Waar begint uw reis?\n')
+    eindstation = input('Waar eindigt uw reis?\n')
+    kaart_code = naam + beginstation + eindstation
+
+    print(f'De code van uw kaartje: {kaart_code}')
+    print(f'De ASCII-code van uw kaartje: {code(kaart_code)}')
+
+    return
+
+
+# ----- 9.5 ----- #
+def run95():
+    while True:
+        try:
+            uurloon = float(input('Wat verdien je per uur: € '))
+            break
+        except ValueError:
+            print('Voer een geldig getal in.')
+            continue
+
+    while True:
+        try:
+            aantalUur = float(input('Hoeveel uur heb je gewerkt: '))
+            break
+        except ValueError:
+            print('Voer een geldig getal in.')
+            continue
+
+    print(f'{aantalUur} uur werken levert € {uurloon * aantalUur} op.')

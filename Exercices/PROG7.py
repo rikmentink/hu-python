@@ -1,4 +1,4 @@
-### 7.1 ###
+# ----- 7.1 ----- #
 def seizoen(maand):
     """
     Geeft het seizoen dat bij de huidige maand hoort.
@@ -18,7 +18,7 @@ def seizoen(maand):
         return 'Ongeldig'
 
 
-### 7.2 ###
+# ----- 7.2 ----- #
 def analyzer(lijst):
     """
     Het neemt een reeks getallen gescheiden door streepjes, sorteert ze en
@@ -50,7 +50,7 @@ def analyzer(lijst):
 """
 
 
-### 7.3 ###
+# ----- 7.3 ----- #
 def gemiddelde_per_student(studentencijfers):
     """
     Berekent voor ieder item in de lijst het gemiddelde van die lijst.
@@ -65,6 +65,7 @@ def gemiddelde_per_student(studentencijfers):
     return gemiddelde
 
 
+# ----- 7.4 ----- #
 def gemiddelde_van_alle_studenten(studentencijfers):
     """
     Berekent het gemiddelde van de gemiddelden van iedere sublijst
@@ -84,7 +85,7 @@ print(gemiddelde_per_student(studentencijfers))
 print(gemiddelde_van_alle_studenten(studentencijfers))
 
 
-### 7.4 ###
+# ----- 7.4 ----- #
 for tafel in range(1, 11):
     for nummer in range(1, 11):
         print(f'{nummer} x {tafel} = {nummer*tafel}')

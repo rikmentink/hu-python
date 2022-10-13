@@ -1,4 +1,4 @@
-### 8.1 ###
+# ----- 8.1 ----- #
 """
 getallen = []
 while True:
@@ -10,7 +10,7 @@ while True:
 print(f'Er zijn {len(getallen)} getallen ingevoerd, de som is: {sum(getallen)}')
 """
 
-### 8.2 ###
+# ----- 8.2 ----- #
 """
 woord = input('Geef een string van vier letters: ')
 
@@ -22,7 +22,7 @@ print(f'Inlezen van correcte string: {woord} is geslaagd')
 """
 
 
-### 8.3 ###
+# ----- 8.3 ----- #
 def hoogvliegers(dict_studenten_cijfers):
     res = []
     for item in dict_studenten_cijfers.items():
@@ -31,15 +31,13 @@ def hoogvliegers(dict_studenten_cijfers):
     return dict(res)
 
 
-### 8.4 ###
+# ----- 8.4 ----- #
 def tickers_to_dict(filename):
     with open(filename, 'r') as file:
         companies = []
         for company in file.read().splitlines():
             companies.append(list(company.split(':')))
         return dict(companies)
-
-
 
 
 def name_to_symbol(name, tickers):
@@ -50,7 +48,7 @@ def symbol_to_name(symbol, tickers):
     return list(tickers.keys())[list(tickers.values()).index(symbol)]
 
 
-tickers = tickers_to_dict('tickers.txt')
+tickers = tickers_to_dict('Bestanden/tickers.txt')
 
 """
 name = input('Enter Company name: ')
@@ -61,7 +59,7 @@ print("Company name: {}".format(symbol_to_name(symbol, tickers)))
 """
 
 
-### 8.5 ###
+# ----- 8.5 ----- #
 def namen():
     """
     Neemt een lijst met namen, een geeft een dictionary terug met de namen als
@@ -82,4 +80,3 @@ def namen():
                 namendict[keys] = values
             break
     return namendict
-
