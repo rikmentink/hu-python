@@ -23,3 +23,5 @@ elif prijs < inworp:
 else:
     print('U heeft genoeg betaald.')
 
+def bereken_wisselgeld(test):
+    return 'hoi'

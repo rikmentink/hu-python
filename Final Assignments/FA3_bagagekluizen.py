@@ -1,7 +1,8 @@
 """
 Programming
 Final assignment 3: Bagagekluizen
-(c) 2021 Hogeschool Utrecht,
+(c) 2021 Hogeschool Utrecht
+
 Tijmen Muller en 
 Bart van Eijkelenburg (bart.vaneijkelenburg@hu.nl)
 
